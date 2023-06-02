@@ -224,6 +224,9 @@ See [docs/openai_api.md](docs/openai_api.md).
 ### Hugging Face Generation APIs
 See [fastchat/serve/huggingface_api.py](fastchat/serve/huggingface_api.py).
 
+### LangChain Integration
+See [docs/langchain_integration](docs/langchain_integration.md).
+
 ## Evaluation
 
 Our AI-enhanced evaluation pipeline is based on GPT-4. This section provides a high-level summary of the pipeline. For detailed instructions, please refer to the [evaluation](fastchat/eval) documentation.
@@ -268,7 +271,7 @@ torchrun --nproc_per_node=4 --master_port=20001 fastchat/train/train_mem.py \
     --model_name_or_path ~/model_weights/llama-7b  \
     --data_path playground/data/dummy.json \
     --bf16 True \
-    --output_dir output \
+    --output_dir output_vicuna \
     --num_train_epochs 3 \
     --per_device_train_batch_size 2 \
     --per_device_eval_batch_size 2 \
